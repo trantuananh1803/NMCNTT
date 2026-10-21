@@ -1,8 +1,4 @@
-# Mapping 43 class chuẩn của GTSRB (German Traffic Sign Recognition Benchmark)
-# sang tên tiếng Việt KHÔNG DẤU. Dùng chung cho main.py (demo) và báo cáo.
-# Không dấu vì cv2.putText của OpenCV không hỗ trợ hiển thị ký tự Unicode
-# có dấu tiếng Việt (sẽ hiện dấu '?' nếu dùng bản có dấu).
-# Thứ tự ClassId 0-42 đúng theo cấu trúc thư mục Train/0 .. Train/42 của GTSRB.
+
 
 CLASS_NAMES = {
     0: "Gioi han toc do (20km/h)",

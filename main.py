@@ -4,23 +4,15 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from class_names import CLASS_NAMES
 
-# CHÚ Ý: cv2.putText không hỗ trợ chữ có dấu tiếng Việt (sẽ hiện dấu '?'),
-# nên class_names.py đang dùng tiếng Việt KHÔNG DẤU cho khớp.
 
 
 def get_index_to_classid(train_dir):
-    """
-    flow_from_directory (lúc train) gán class_index theo thứ tự SẮP XẾP CHUỖI
-    tên thư mục ('0','1','10','11',...), không theo thứ tự SỐ. Hàm này dựng lại
-    đúng cách sắp xếp đó để tra ngược class_index model trả về -> ClassId thật,
-    rồi mới tra tiếp sang CLASS_NAMES cho đúng tên biển báo.
-    """
+    
     folder_names = sorted(os.listdir(train_dir))
     return {i: int(name) for i, name in enumerate(folder_names)}
 
 
-# Load đúng model TỐT NHẤT (do ModelCheckpoint lưu trong train.py),
-# không phải bản "final" của epoch cuối như bài cũ (đó là bug làm sai kết quả demo).
+
 MODEL_PATH = "best_model.h5"
 IMG_SIZE = (30, 30)
 THRESHOLD = 0.8
