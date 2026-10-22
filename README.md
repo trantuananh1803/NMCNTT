@@ -26,9 +26,6 @@ project/
 1. Vào Kaggle: https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign
 2. Đăng nhập (cần tài khoản Kaggle, miễn phí), bấm Download.
 3. Giải nén, đổi tên thư mục gốc thành `Data`, đặt cùng cấp với các file `.py` ở trên.
-4. Kiểm tra: mở `Data/Train/0/` phải thấy ảnh `.png` bên trong. Nếu thấy thêm 1 lớp
-   thư mục thừa kiểu `GTSRB-Training_fixed/` chen giữa, kéo nội dung ra ngoài cho đúng
-   cấu trúc ở trên — đây chính là lỗi mà bài trước từng dính (thư mục lồng do giải nén).
 
 ## Bước 2 — Cài môi trường
 
